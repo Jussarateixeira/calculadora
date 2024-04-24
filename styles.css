@@ -48,7 +48,7 @@ form .display {
 form .display input {
     text-align: left;
     font-size: 45px;
-    width: 350px;
+    width: auto;
 }
 
 form input.equal {
