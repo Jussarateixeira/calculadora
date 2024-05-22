@@ -1,3 +1,4 @@
+let getedResult = false;
 const display = document.querySelector('#display');
 const buttons = document.querySelectorAll('input[type=button]');
 
@@ -17,8 +18,15 @@ buttons.forEach((myButton) => {
         } else {
             display.value += myButton.value;
         }
-
+        if (myButton.value == '=') {
+           getedResult = true; 
+        }
+        else if(myButton.value != '=' && getedResult == true && myButton.value != ' '){
+            display.value = myButton.value;
+            getedResult = false;
+        }
     }
+
 
 })
 
